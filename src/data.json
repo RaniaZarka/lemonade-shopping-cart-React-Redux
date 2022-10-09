@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Regular Lemonade",
+      "image": "/images/dietlemonade.png",
+      "description": " Ingredients: Fresh lemon, water, sugar, ice cubes",
+      "price": 50
+    },
+
+    {
+      "id": 2,
+      "title": "Minted Lemonade",
+      "image": "/images/mintedlemonade.png",
+      "description": "Ingredients: Fresh lemon, fresh mint leaves, water, sugar, ice cubes",
+      "price": 60
+    },
+
+    {
+      "id": 3,
+      "title": "Strawberry Lemonade",
+      "image": "/images/strawberrylemonade.png",
+      "description": "Ingredients:Fresh lemon, fresh strawberries, water, sugar, ice cubes",
+      "price": 80
+    },
+
+    {
+      "id": 4,
+      "title": "Ginger Lemonade",
+      "image": "/images/gingerlemonade.png",
+      "description": "Ingredients:Fresh lemon,fresh ginger, water, sugar, ice cubes",
+      "price": 70
+    },
+    {
+      "id": 5,
+      "title": "Diet Lemonade",
+      "image": "/images/dietlemonade.png",
+      "description": "Ingredients:Fresh lemon, water, diet sugar, ice cubes",
+      "price": 60
+    },
+    {
+      "id": 6,
+      "title": "Frozen Lemonade",
+      "image": "/images/frozenlemonade.png",
+      "description": "Ingredients:Fresh lemon, water, sugar, crushed ice",
+      "price": 60
+    }
+  ]
+}
