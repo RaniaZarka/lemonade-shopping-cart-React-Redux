@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Regular Lemonade",
-      "image": "/images/dietlemonade.png",
+      "image": "/images/lemonade.png",
       "description": " Ingredients: Fresh lemon, water, sugar, ice cubes",
       "price": 50
     },
@@ -34,7 +34,7 @@
     {
       "id": 5,
       "title": "Diet Lemonade",
-      "image": "/images/dietlemonade.png",
+      "image": "/images/lemonade.png",
       "description": "Ingredients:Fresh lemon, water, diet sugar, ice cubes",
       "price": 60
     },

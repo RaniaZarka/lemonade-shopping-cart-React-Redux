@@ -8,7 +8,7 @@ import {
 } from "./actions/cartActions";
 import Total from "./Total";
 
-class Cart extends Component {
+class sideCart extends Component {
   //to remove the item completely
   handleRemove = (id) => {
     this.props.removeItem(id);
@@ -26,10 +26,6 @@ class Cart extends Component {
       this.props.items.map((item) => {
         return (
           <li className="collection-item avatar" key={item.id}>
-            <div className="item-img">
-              <img src={item.image} alt={item.title} className="" />
-            </div>
-
             <div className="item-desc">
               <span className="title">{item.title}</span>
               <p>
@@ -106,4 +102,4 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(sideCart);

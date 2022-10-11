@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addToCart } from "./actions/cartActions";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Total from "./Total";
+import SideCart from "./sideCart";
 
 class Home extends Component {
   handleClick = (id) => {
     this.props.addToCart(id);
   };
-
-  notify = () => toast(" added to cart");
 
   render() {
     let itemList = this.props.items.map((item) => {
@@ -44,6 +44,10 @@ class Home extends Component {
     return (
       <div className="container">
         <div className="box">{itemList}</div>
+        <div>
+          {" "}
+          <Total />{" "}
+        </div>
       </div>
     );
   }

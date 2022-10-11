@@ -5,7 +5,7 @@ import {
   REMOVE_ITEM,
   SUB_QUANTITY,
   ADD_QUANTITY,
-} from "../actions/action-types/cart-actions";
+} from "../actions/cart-actions-types";
 
 const initState = {
   items: data.products,

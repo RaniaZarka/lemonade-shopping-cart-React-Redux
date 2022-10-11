@@ -3,7 +3,7 @@ import {
   REMOVE_ITEM,
   SUB_QUANTITY,
   ADD_QUANTITY,
-} from "./action-types/cart-actions";
+} from "./cart-actions-types";
 
 //add cart action
 export const addToCart = (id) => {

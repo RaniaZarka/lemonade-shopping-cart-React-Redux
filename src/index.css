@@ -8,9 +8,11 @@
     height: 7rem; 
     position: relative;  
 }
+
 .right li{
     padding-top: 3rem;  
 }
+
 .box{
     display: flex;
     justify-content: space-between;
@@ -23,7 +25,7 @@
     cursor: pointer;
 }
 .card{
-    width: 300px;
+    width: 280px;
 }
 .card-image{
    
@@ -55,9 +57,12 @@
     
 }
 .collection .collection-item img{
-    width: 150px;
+    width: 5rem;
+    height: 7rem;
     margin-right: 25px;
 }
 .item-desc{
     align-self:center;
 }
+
+
