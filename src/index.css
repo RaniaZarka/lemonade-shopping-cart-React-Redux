@@ -39,12 +39,19 @@
     color: black;
     font-weight: 400
 }
-.cart{
-    margin-top:40px;
-}
+
 .btn-floating.halfway-fab{
     margin-bottom: 2rem;
 }
+
+.mg4rem{
+    margin-right: 4rem;
+}
+
+.cart{
+    margin-top:40px;
+}
+
 .collection .collection-item{
     display: flex;
 }

@@ -1,41 +1,55 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addToCart } from "./actions/cartActions";
+import { addToCart, subtractQuantity } from "./actions/cartActions";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Total from "./Total";
-import SideCart from "./sideCart";
 
 class Home extends Component {
-  handleClick = (id) => {
+  handleClickAdd = (id) => {
     this.props.addToCart(id);
   };
 
+  handleClickRemove = (id) => {
+    this.props.subtractQuantity(id);
+  };
+
   render() {
-    let itemList = this.props.items.map((item) => {
+    let productList = this.props.items.map((product) => {
       return (
-        <div className="card" key={item.id}>
-          <div className="card-image">
-            <img src={item.image} alt={item.title} />
-            <span className="card-title">{item.title}</span>
-          </div>
+        <div className="card" key={product.id}>
+          <div>
+            <div className="card-image">
+              <img src={product.image} alt={product.title} />
+              <span className="card-title">{product.title}</span>
+            </div>
 
-          <div className="card-content">
-            <p>{item.description}</p>
-            <p>
-              <b>Price: {item.price} kr</b>
-              <span
-                to="/"
-                className="btn-floating halfway-fab waves-effect waves-light green"
-                onClick={() => {
-                  this.handleClick(item.id);
-                }}
-              >
-                <i className="material-icons">add</i>
-              </span>
-            </p>
+            <div className="card-content">
+              <p>{product.description}</p>
+              <p>
+                <b>Price: {product.price} kr</b>
 
-            <ToastContainer autoClose={1000} />
+                <span
+                  to="/"
+                  className="btn-floating btn-small halfway-fab waves-effect waves-light green"
+                  onClick={() => {
+                    this.handleClickAdd(product.id);
+                  }}
+                >
+                  <i className="material-icons">add</i>
+                </span>
+                <span
+                  to="/"
+                  className="btn-floating btn-small halfway-fab waves-effect waves-light green mg4rem"
+                  onClick={() => {
+                    this.handleClickRemove(product.id);
+                  }}
+                >
+                  <i className="material-icons">remove</i>
+                </span>
+              </p>
+              <ToastContainer autoClose={1000} />
+            </div>
           </div>
         </div>
       );
@@ -43,7 +57,8 @@ class Home extends Component {
 
     return (
       <div className="container">
-        <div className="box">{itemList}</div>
+        <div className="box">{productList}</div>
+
         <div>
           {" "}
           <Total />{" "}
@@ -61,6 +76,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id) => {
       dispatch(addToCart(id));
+    },
+    subtractQuantity: (id) => {
+      dispatch(subtractQuantity(id));
     },
   };
 };

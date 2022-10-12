@@ -45,6 +45,7 @@ const cartReducer = (state = initState, action) => {
     //calculating the total
     let newTotal = state.total - itemToRemove.price * itemToRemove.quantity;
     console.log(itemToRemove);
+
     return {
       ...state,
       addedItems: new_items,
@@ -67,6 +68,7 @@ const cartReducer = (state = initState, action) => {
     if (addedItem.quantity === 1) {
       let new_items = state.addedItems.filter((item) => item.id !== action.id);
       let newTotal = state.total - addedItem.price;
+      toast.success(addedItem.title + " removed from cart");
       return {
         ...state,
         addedItems: new_items,
@@ -74,6 +76,7 @@ const cartReducer = (state = initState, action) => {
       };
     } else {
       addedItem.quantity -= 1;
+      toast.success(addedItem.title + " removed from cart");
       let newTotal = state.total - addedItem.price;
       return {
         ...state,
@@ -81,15 +84,7 @@ const cartReducer = (state = initState, action) => {
       };
     }
   }
-
-  if (action.type === "SUB_SHIPPING") {
-    return {
-      ...state,
-      total: state.total - 6,
-    };
-  } else {
-    return state;
-  }
+  return state;
 };
 
 export default cartReducer;
